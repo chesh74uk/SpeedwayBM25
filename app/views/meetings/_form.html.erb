@@ -2,5 +2,5 @@
   <%= f.input :date, as: :string, placeholder: "#{Date.today}" %>
   <%= f.input :home_team_name, collection: @team_names %>
   <%= f.input :away_team_name, collection: @team_names %>
-  <%= f.submit %>
+  <%= f.submit data: {turbo_frame: "_top"} %>
 <% end %>

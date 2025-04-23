@@ -1,3 +1,5 @@
 <h3>New Meeting</h3>
 
-<%= render 'form', meeting: @meeting %>
+<%= turbo_frame_tag "add_new_meeting" do %>
+  <%= render 'form', meeting: @meeting %>
+<% end %>
