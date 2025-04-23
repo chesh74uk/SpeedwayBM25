@@ -1,6 +1,6 @@
 <h3>Edit Meeting</h3>
 
-<%= render 'form', meeting: @meeting %>
+<%= turbo_frame_tag "edit_meeting" do %>
+  <%= render 'form', meeting: @meeting %>
+<% end %>
 
-<%= link_to 'Show', @meeting %> |
-<%= link_to 'Back', meetings_path %>
