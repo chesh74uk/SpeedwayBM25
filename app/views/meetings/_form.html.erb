@@ -1,0 +1,6 @@
+<%= simple_form_for @meeting do |f| %>
+  <%= f.input :date, as: :string, placeholder: "#{Date.today}" %>
+  <%= f.input :home_team_name, collection: @team_names %>
+  <%= f.input :away_team_name, collection: @team_names %>
+  <%= f.submit %>
+<% end %>
