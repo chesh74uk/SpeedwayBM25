@@ -304,5 +304,4 @@ production:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      #
       uri: mongodb+srv://Cluster90016:b1qNAfB1VPrMywV8@cluster90016.m6qysai.mongodb.net/speedway_mb25_production
