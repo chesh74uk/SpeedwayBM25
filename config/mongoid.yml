@@ -3,7 +3,7 @@ development:
   clients:
     # Defines the default client. (required)
     default:
-      uri: mongodb+srv://<%= Rails.application.credentials.dig(:atlas, :user_id) %>:<%= Rails.application.credentials.dig(:atlas, :password) %>@cluster90016.m6qysai.mongodb.net/speedway_mb25_development
+      uri: mongodb+srv://<%= Rails.application.credentials.dig(:atlas, :user_id) %>:<%= Rails.application.credentials.dig(:atlas, :password) %>@cluster90016.m6qysai.mongodb.net/speedway_mb25_development?authMechanism=SCRAM-SHA-1
       options:
         heartbeat_frequency: 10000
   # Configure Mongoid-specific options. (optional)
@@ -28,4 +28,4 @@ production:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      uri: mongodb+srv://<%= ENV['ATLAS_USER'] %>:<%= ENV['ATLAS_KEY'] %>@cluster90016.m6qysai.mongodb.net/speedway_mb25_production
+      uri: mongodb+srv://<%= ENV['ATLAS_USER'] %>:<%= ENV['ATLAS_KEY'] %>@cluster90016.m6qysai.mongodb.net/speedway_mb25_production?authMechanism=SCRAM-SHA-1
