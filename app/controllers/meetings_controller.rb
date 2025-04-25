@@ -15,7 +15,7 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
     respond_to do |format|
       if @meeting.save
-        format.html { redirect_to meetings_path notice: 'Meeting was successfully created' }
+        format.html { redirect_to meetings_path notice: "Meeting was successfully created" }
       else
         format.html { render :new }
       end
@@ -25,7 +25,7 @@ class MeetingsController < ApplicationController
   def update
     respond_to do |format|
       if @meeting.update(meeting_params)
-        format.html { redirect_to meetings_path, notice: 'Meeting was successfully updated' }
+        format.html { redirect_to meetings_path, notice: "Meeting was successfully updated" }
       else
         format.html { render :edit }
       end
@@ -37,7 +37,7 @@ class MeetingsController < ApplicationController
   def destroy
     @meeting.destroy
     respond_to do |format|
-      format.html { redirect_to meetings_url, notice: 'Meeting was successfully removed' }
+      format.html { redirect_to meetings_url, notice: "Meeting was successfully removed" }
     end
   end
 
@@ -47,7 +47,6 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.find(params[:id])
   end
   def meeting_params
-    params.expect(meeting: [:date, :home_team_name, :away_team_name, :gate])
+    params.expect(meeting: [ :date, :home_team_name, :away_team_name, :gate ])
   end
-
 end
