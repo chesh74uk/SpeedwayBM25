@@ -4,16 +4,16 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      # uri: mongodb://user:password@mongodb.domain.com:27017/speedway_mb25_development
-
+      #
+      uri: mongodb+srv://Cluster90016:b1qNAfB1VPrMywV8@cluster90016.m6qysai.mongodb.net/speedway_mb25_development
       # Otherwise define the parameters separately.
       # This defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: speedway_mb25_development
+        #database: speedway_mb25_development
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-        - localhost:27017
+        #hosts:
+      # - localhost:27017
       options:
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
@@ -60,7 +60,7 @@ development:
 
         # Changes the default time in seconds the server monitors refresh their status
         # via hello commands. (default: 10)
-        # heartbeat_frequency: 10
+        heartbeat_frequency: 10000
 
         # The time in seconds for selecting servers for a near read preference. (default: 0.015)
         # local_threshold: 0.015
@@ -243,7 +243,7 @@ development:
     #
     # Additionally, only when the clients are configured via the
     # configuration file is the log level given by this option honored.
-    # log_level: :info
+    log_level: :error
 
     # Store BigDecimals as Decimal128s instead of strings in the db.
     # map_big_decimal_to_decimal128: true
@@ -297,3 +297,12 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      # Mongoid can connect to a URI accepted by the driver:
+      #
+      uri: mongodb+srv://Cluster90016:b1qNAfB1VPrMywV8@cluster90016.m6qysai.mongodb.net/speedway_mb25_production

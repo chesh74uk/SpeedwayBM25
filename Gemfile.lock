@@ -309,6 +309,7 @@ GEM
 PLATFORMS
   aarch64-linux-gnu
   aarch64-linux-musl
+  arm-linux-eabihf
   arm-linux-gnu
   arm-linux-musl
   x86_64-linux
